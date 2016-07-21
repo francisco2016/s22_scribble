@@ -51,7 +51,8 @@ public class DrawDemo
     }
     
     /**
-     *  que permita dibujar un polígono regular con n lados, es decir, si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc.
+     *  que permita dibujar un polígono regular con n lados, es decir, si n vale 3, será un triángulo, 
+     *  si vale 4 será un cuadrado, etc. --------------------------------------------------------------------- 0099
      */
     public void drawPolygon(int n){
         Pen pen = new Pen(150, 10, myCanvas);
@@ -59,6 +60,19 @@ public class DrawDemo
         for(int i = 0; i < n; i ++){
             pen.move(100);
             pen.turn(360/n);
+        }
+    }
+    
+    /**
+     *
+     * dibuje una espiral 
+     */
+    public void drawSpiral(){
+        Pen pen = new Pen(250, 225, myCanvas);
+        pen.setColor(Color.BLUE);
+        for(int i = 1; i < 100; i ++ ){
+            pen.move(17 + (i * 3));
+            pen.turn(90);
         }
     }
     
