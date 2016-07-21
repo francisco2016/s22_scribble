@@ -51,6 +51,18 @@ public class DrawDemo
     }
     
     /**
+     *  que permita dibujar un polígono regular con n lados, es decir, si n vale 3, será un triángulo, si vale 4 será un cuadrado, etc.
+     */
+    public void drawPolygon(int n){
+        Pen pen = new Pen(150, 10, myCanvas);
+        pen.setColor(Color.BLACK);
+        for(int i = 0; i < n; i ++){
+            pen.move(100);
+            pen.turn(360/n);
+        }
+    }
+    
+    /**
      * Draw a square on the screen.
      */
     public void drawSquare()
