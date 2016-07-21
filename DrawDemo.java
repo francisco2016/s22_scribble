@@ -38,6 +38,19 @@ public class DrawDemo
     }
     
     /**
+     * permita dibujar un pentágono verde. ------------------------------------------------------------------------ 0099
+     */
+    public void drawPentagon(int x, int y, int lado){
+        Pen pen = new Pen(x, y, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for(int i = 0; i < 5; i ++){
+            pen.move(lado);
+            pen.turn(360/5);
+        }
+    }
+    
+    /**
      * Draw a square on the screen.
      */
     public void drawSquare()
